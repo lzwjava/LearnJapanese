@@ -82,7 +82,15 @@ struct ContentView: View {
     }
     
     func paintO(path: inout Path) {
+        path.move(to: CGPoint(x: 30, y: 40))
+        path.addLine(to: CGPoint(x: 60, y: 40))
         
+        path.move(to: CGPoint(x: 45, y: 30))
+        path.addLine(to: CGPoint(x: 45, y: 80))
+        path.addCurve(to: CGPoint(x: 55, y: 80), control1: CGPoint(x: -10, y: 45), control2: CGPoint(x: 110, y: 40))
+            
+        path.move(to: CGPoint(x: 65, y: 35))
+        path.addLine(to: CGPoint(x: 75, y: 45))
     }
     
     var body: some View {
@@ -95,7 +103,8 @@ struct ContentView: View {
 //            paintHe(path: &path)
 //            paintSi(path: &path)
 //            paintTe(path: &path)
-            paintE(path: &path)
+//            paintE(path: &path)
+            paintO(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
