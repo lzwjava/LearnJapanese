@@ -87,7 +87,7 @@ struct ContentView: View {
         
         path.move(to: CGPoint(x: 45, y: 30))
         path.addLine(to: CGPoint(x: 45, y: 80))
-        path.addCurve(to: CGPoint(x: 55, y: 80), control1: CGPoint(x: -10, y: 45), control2: CGPoint(x: 110, y: 40))
+        path.addCurve(to: CGPoint(x: 55, y: 80), control1: CGPoint(x: -15, y: 50), control2: CGPoint(x: 110, y: 40))
             
         path.move(to: CGPoint(x: 65, y: 35))
         path.addLine(to: CGPoint(x: 75, y: 45))
