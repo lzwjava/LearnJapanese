@@ -93,9 +93,48 @@ struct ContentView: View {
         path.addLine(to: CGPoint(x: 75, y: 45))
     }
     
+    func paintKa(path: inout Path) {
+        path.move(to: CGPoint(x: 42, y: 20))
+        path.addLine(to: CGPoint(x: 22, y: 78))
+        
+        path.move(to: CGPoint(x: 20, y: 40))
+        path.addCurve(to: CGPoint(x: 38, y: 78), control1: CGPoint(x: 80, y: 20), control2: CGPoint(x: 60, y: 90))
+        
+        path.move(to: CGPoint(x: 70, y: 30))
+        path.addCurve(to: CGPoint(x: 80, y: 60), control1: CGPoint(x: 75, y: 40), control2: CGPoint(x: 75, y: 40))
+    }
+    
+    func paintKi(path: inout Path) {
+        path.move(to: CGPoint(x: 23, y: 37))
+        path.addLine(to: CGPoint(x: 75, y: 36))
+        
+        path.move(to: CGPoint(x: 22, y: 50))
+        path.addLine(to: CGPoint(x: 78, y: 48))
+        
+        path.move(to: CGPoint(x: 42, y: 22))
+        path.addCurve(to: CGPoint(x: 70, y: 65), control1: CGPoint(x: 55, y: 50), control2: CGPoint(x: 55, y: 50))
+        
+        path.addCurve(to: CGPoint(x: 65, y: 83), control1: CGPoint(x: 20, y: 40), control2: CGPoint(x: 20, y: 100))
+    }
+    
+    func paintSu(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 30))
+        path.addLine(to: CGPoint(x: 80, y: 30))
+        
+        path.move(to: CGPoint(x: 60, y: 19))
+        path.addLine(to: CGPoint(x: 60, y: 60))
+        
+        path.addCurve(to: CGPoint(x: 40, y: 80), control1: CGPoint(x: 60, y: 70), control2: CGPoint(x: 50, y: 80))
+        
+        path.addEllipse(in: CGRect(x: 37, y: 40, width: 23, height: 25))
+    }
+    
+    func paintSe(path: inout Path) {
+        
+    }
+    
     var body: some View {
         Path { path in
-            
 //            paintYa(path: &path)
 //            paintI(path: &path)
 //            paintU(path: &path)
@@ -104,7 +143,11 @@ struct ContentView: View {
 //            paintSi(path: &path)
 //            paintTe(path: &path)
 //            paintE(path: &path)
-            paintO(path: &path)
+//            paintO(path: &path)
+//            paintKa(path: &path)
+//            paintKi(path: &path)
+//            paintSu(path: &path)
+            
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
