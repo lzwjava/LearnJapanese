@@ -130,7 +130,38 @@ struct ContentView: View {
     }
     
     func paintSe(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 40))
+        path.addLine(to: CGPoint(x: 80, y: 40))
         
+        path.move(to: CGPoint(x: 65, y: 20))
+        path.addCurve(to: CGPoint(x: 50, y: 60), control1: CGPoint(x: 65, y: 50), control2: CGPoint(x: 65, y: 65))
+        
+        path.move(to: CGPoint(x: 38, y: 22))
+        path.addCurve(to: CGPoint(x: 75, y: 79), control1: CGPoint(x: 35, y: 75), control2: CGPoint(x: 30, y: 85))
+    }
+    
+    func paintSo(path: inout Path) {
+        path.move(to: CGPoint(x: 35, y: 25))
+        path.addLine(to: CGPoint(x: 70, y: 23))
+        path.addLine(to: CGPoint(x: 38, y: 48))
+        
+        path.move(to: CGPoint(x: 22, y: 50))
+        path.addLine(to: CGPoint(x: 77, y: 42))
+        path.addCurve(to: CGPoint(x: 75, y: 78), control1: CGPoint(x: 35, y: 48), control2: CGPoint(x: 35, y: 78))
+    }
+    
+    func paintTa(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 38))
+        path.addLine(to: CGPoint(x: 58, y: 35))
+        
+        path.move(to: CGPoint(x: 40, y: 20))
+        path.addLine(to: CGPoint(x: 28, y: 78))
+        
+        path.move(to: CGPoint(x: 50, y: 45))
+        path.addLine(to: CGPoint(x: 78, y: 45))
+        
+        path.move(to: CGPoint(x: 50, y: 60))
+        path.addCurve(to: CGPoint(x: 78, y: 78), control1: CGPoint(x: 45, y: 75), control2: CGPoint(x: 45, y: 80))
     }
     
     var body: some View {
@@ -147,7 +178,9 @@ struct ContentView: View {
 //            paintKa(path: &path)
 //            paintKi(path: &path)
 //            paintSu(path: &path)
-            
+//            paintSe(path: &path)
+//            paintSo(path: &path)
+            paintTa(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
