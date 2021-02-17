@@ -164,6 +164,81 @@ struct ContentView: View {
         path.addCurve(to: CGPoint(x: 78, y: 78), control1: CGPoint(x: 45, y: 75), control2: CGPoint(x: 45, y: 80))
     }
     
+    func paintTi(path: inout Path) {
+        path.move(to: CGPoint(x: 25, y: 32))
+        path.addLine(to: CGPoint(x: 70, y: 30))
+        
+        path.move(to: CGPoint(x: 42, y: 20))
+        path.addCurve(to: CGPoint(x: 33, y: 58), control1: CGPoint(x: 40, y: 40), control2: CGPoint(x: 40, y: 40))
+        
+        path.addCurve(to: CGPoint(x: 40, y: 78), control1: CGPoint(x: 80, y: 30), control2: CGPoint(x: 80, y: 80))
+    }
+    
+    func paintCu(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 38))
+        path.addCurve(to: CGPoint(x: 40, y: 78), control1: CGPoint(x: 80, y: 15), control2: CGPoint(x: 100, y: 70))
+    }
+    
+    func paintTo(path: inout Path) {
+        path.move(to: CGPoint(x: 41, y: 20))
+        path.addCurve(to: CGPoint(x: 50, y: 46), control1: CGPoint(x: 42, y: 40), control2: CGPoint(x: 42, y: 40))
+        
+        path.move(to: CGPoint(x: 70, y: 40))
+        path.addCurve(to: CGPoint(x: 70, y: 75), control1: CGPoint(x: 10, y: 48), control2: CGPoint(x: 10, y: 80))
+    }
+    
+    func paintNa(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 30))
+        path.addLine(to: CGPoint(x: 50, y: 30))
+        
+        path.move(to: CGPoint(x: 40, y: 20))
+        path.addCurve(to: CGPoint(x: 20, y: 75), control1: CGPoint(x: 33, y: 48), control2: CGPoint(x: 33, y: 48))
+        
+        path.move(to: CGPoint(x: 60, y: 25))
+        path.addLine(to: CGPoint(x: 78, y: 38))
+        
+        path.move(to: CGPoint(x: 62, y: 40))
+        path.addLine(to: CGPoint(x: 62, y: 70))
+        path.addCurve(to: CGPoint(x: 40, y: 70), control1: CGPoint(x: 62, y: 80), control2: CGPoint(x: 40, y: 80))
+        path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 40, y: 50), control2: CGPoint(x: 80, y: 60))
+    }
+    
+    func paintNi(path: inout Path) {
+        path.move(to: CGPoint(x: 30, y: 20))
+        path.addCurve(to: CGPoint(x: 30, y: 80), control1: CGPoint(x: 26, y: 50), control2: CGPoint(x: 26, y: 50))
+        
+        path.move(to: CGPoint(x: 43, y: 30))
+        path.addLine(to: CGPoint(x: 77, y: 30))
+        
+        path.move(to: CGPoint(x: 50, y: 50))
+        path.addCurve(to: CGPoint(x: 80, y: 75), control1: CGPoint(x: 40, y: 75), control2: CGPoint(x: 50, y: 75))
+    }
+    
+    func paintNu(path: inout Path) {
+        path.move(to: CGPoint(x: 35, y: 25))
+        path.addCurve(to: CGPoint(x: 47, y: 65), control1: CGPoint(x: 35, y: 50), control2: CGPoint(x: 35, y: 50))
+        
+        path.move(to: CGPoint(x: 57, y: 20))
+        path.addCurve(to: CGPoint(x: 30, y: 78), control1: CGPoint(x: 57, y: 53), control2: CGPoint(x: 57, y: 63))
+        path.addCurve(to: CGPoint(x: 57, y: 37), control1: CGPoint(x: 10, y: 60), control2: CGPoint(x: 42, y: 30))
+        path.addCurve(to: CGPoint(x: 60, y: 77), control1: CGPoint(x: 80, y: 30), control2: CGPoint(x: 80, y: 78))
+        path.addCurve(to: CGPoint(x: 82, y: 70), control1: CGPoint(x: 45, y: 60), control2: CGPoint(x: 77, y: 57))
+    }
+    
+    func paintNe(path: inout Path) {
+        path.move(to: CGPoint(x: 21, y: 36))
+        path.addLine(to: CGPoint(x: 37, y: 36))
+        
+        path.move(to: CGPoint(x: 37, y: 20))
+        path.addLine(to: CGPoint(x: 37, y: 80))
+        
+        path.move(to: CGPoint(x: 20, y: 62))
+        path.addCurve(to: CGPoint(x: 75, y: 63), control1: CGPoint(x: 65, y: 22), control2: CGPoint(x: 75, y: 30))
+        
+        path.addCurve(to: CGPoint(x: 50, y: 70), control1: CGPoint(x: 70, y: 82), control2: CGPoint(x: 57, y: 81))
+        path.addCurve(to: CGPoint(x: 81, y: 72), control1: CGPoint(x: 50, y: 57), control2: CGPoint(x: 77, y: 57))
+    }
+    
     var body: some View {
         Path { path in
 //            paintYa(path: &path)
@@ -180,7 +255,14 @@ struct ContentView: View {
 //            paintSu(path: &path)
 //            paintSe(path: &path)
 //            paintSo(path: &path)
-            paintTa(path: &path)
+//            paintTa(path: &path)
+//            paintTi(path: &path)
+//            paintCu(path: &path)
+//            paintTo(path: &path)
+//            paintNa(path: &path)
+//            paintNi(path: &path)
+//            paintNu(path: &path)
+            paintNe(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
