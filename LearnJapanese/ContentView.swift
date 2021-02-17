@@ -258,6 +258,30 @@ struct ContentView: View {
         path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 40, y: 55), control2: CGPoint(x: 62, y: 60))
     }
     
+    func paintHi(path: inout Path) {
+        path.move(to: CGPoint(x: 20, y: 30))
+        path.addCurve(to: CGPoint(x: 40, y: 25), control1: CGPoint(x: 37, y: 30), control2: CGPoint(x: 37, y: 30))
+        
+        path.addCurve(to: CGPoint(x: 60, y: 25), control1: CGPoint(x: 10, y: 90), control2: CGPoint(x: 80, y: 90))
+        path.move(to: CGPoint(x: 60, y: 25))
+        path.addCurve(to: CGPoint(x: 80, y: 50), control1: CGPoint(x: 70, y: 40), control2: CGPoint(x: 70, y: 40))
+    }
+    
+    func paintHu(path: inout Path) {
+        path.move(to: CGPoint(x: 38, y: 22))
+        path.addLine(to: CGPoint(x: 63, y: 25))
+        
+        path.move(to: CGPoint(x: 30, y: 50))
+        path.addCurve(to: CGPoint(x: 20, y: 70), control1: CGPoint(x: 30, y: 60), control2: CGPoint(x: 30, y: 60))
+        
+        path.move(to: CGPoint(x: 63, y: 50))
+        path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 77, y: 60), control2: CGPoint(x: 77, y: 60))
+        
+        path.move(to: CGPoint(x: 50, y: 38))
+        path.addCurve(to: CGPoint(x: 60, y: 63), control1: CGPoint(x: 48, y: 48), control2: CGPoint(x: 50, y: 52))
+        path.addCurve(to: CGPoint(x: 35, y: 75), control1: CGPoint(x: 63, y: 78), control2: CGPoint(x: 57, y: 82))
+    }
+    
     var body: some View {
         Path { path in
 //            paintYa(path: &path)
@@ -282,7 +306,8 @@ struct ContentView: View {
 //            paintNi(path: &path)
 //            paintNu(path: &path)
 //            paintNo(path: &path)
-            paintHa(path: &path)
+//            paintHa(path: &path)
+            paintHu(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
