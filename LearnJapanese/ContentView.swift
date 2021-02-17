@@ -239,6 +239,25 @@ struct ContentView: View {
         path.addCurve(to: CGPoint(x: 81, y: 72), control1: CGPoint(x: 50, y: 57), control2: CGPoint(x: 77, y: 57))
     }
     
+    func paintNo(path: inout Path) {
+        path.move(to: CGPoint(x: 50, y: 35))
+        path.addCurve(to: CGPoint(x: 50, y: 35), control1: CGPoint(x: 40, y: 130), control2: CGPoint(x: 0, y: 40))
+        path.addCurve(to: CGPoint(x: 50, y: 80), control1: CGPoint(x: 80, y: 40), control2: CGPoint(x: 80, y: 80))
+    }
+    
+    func paintHa(path: inout Path) {
+        path.move(to: CGPoint(x: 35, y: 23))
+        path.addCurve(to: CGPoint(x: 35, y: 80), control1: CGPoint(x: 32, y: 50), control2: CGPoint(x: 32, y: 50))
+        
+        path.move(to: CGPoint(x: 40, y: 38))
+        path.addLine(to: CGPoint(x: 80, y: 38))
+        
+        path.move(to: CGPoint(x: 62, y: 20))
+        path.addLine(to: CGPoint(x: 62, y: 60))
+        path.addCurve(to: CGPoint(x: 42, y: 70), control1: CGPoint(x: 60, y: 83), control2: CGPoint(x: 40, y: 80))
+        path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 40, y: 55), control2: CGPoint(x: 62, y: 60))
+    }
+    
     var body: some View {
         Path { path in
 //            paintYa(path: &path)
@@ -262,7 +281,8 @@ struct ContentView: View {
 //            paintNa(path: &path)
 //            paintNi(path: &path)
 //            paintNu(path: &path)
-            paintNe(path: &path)
+//            paintNo(path: &path)
+            paintHa(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
