@@ -272,14 +272,29 @@ struct ContentView: View {
         path.addLine(to: CGPoint(x: 63, y: 25))
         
         path.move(to: CGPoint(x: 30, y: 50))
-        path.addCurve(to: CGPoint(x: 20, y: 70), control1: CGPoint(x: 30, y: 60), control2: CGPoint(x: 30, y: 60))
+        path.addCurve(to: CGPoint(x: 20, y: 70), control1: CGPoint(x: 26, y: 60), control2: CGPoint(x: 30, y: 60))
         
         path.move(to: CGPoint(x: 63, y: 50))
-        path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 77, y: 60), control2: CGPoint(x: 77, y: 60))
+        path.addCurve(to: CGPoint(x: 80, y: 70), control1: CGPoint(x: 73, y: 60), control2: CGPoint(x: 73, y: 60))
         
         path.move(to: CGPoint(x: 50, y: 38))
         path.addCurve(to: CGPoint(x: 60, y: 63), control1: CGPoint(x: 48, y: 48), control2: CGPoint(x: 50, y: 52))
         path.addCurve(to: CGPoint(x: 35, y: 75), control1: CGPoint(x: 63, y: 78), control2: CGPoint(x: 57, y: 82))
+    }
+    
+    func paintHo(path: inout Path) {
+        path.move(to: CGPoint(x: 28, y: 20))
+        path.addCurve(to: CGPoint(x: 28, y: 80), control1: CGPoint(x: 25, y: 50), control2: CGPoint(x: 25, y: 50))
+        
+        path.move(to: CGPoint(x: 40, y: 25))
+        path.addCurve(to: CGPoint(x: 80, y: 25), control1: CGPoint(x: 60, y: 27), control2: CGPoint(x: 60, y: 27))
+        
+        path.move(to: CGPoint(x: 40, y: 45))
+        path.addLine(to: CGPoint(x: 80, y: 45))
+        
+        path.move(to: CGPoint(x: 65, y: 28))
+        path.addCurve(to: CGPoint(x: 40, y: 70), control1: CGPoint(x: 72, y: 100), control2: CGPoint(x: 40, y: 80))
+        path.addCurve(to: CGPoint(x: 80, y: 75), control1: CGPoint(x: 50, y: 55), control2: CGPoint(x: 80, y: 60))
     }
     
     var body: some View {
@@ -307,7 +322,8 @@ struct ContentView: View {
 //            paintNu(path: &path)
 //            paintNo(path: &path)
 //            paintHa(path: &path)
-            paintHu(path: &path)
+//            paintHu(path: &path)
+            paintHo(path: &path)
         }.stroke(Color.blue, lineWidth: 5).padding()
     }
 }
